@@ -1,4 +1,11 @@
-gunicorn
-Flask
 line-bot-sdk
+bs4
+flask
 pymongo
+matplotlib
+datetime
+imgurpython
+pandas
+pandas_datareader
+fix_yahoo_finance
+mpl_finance
