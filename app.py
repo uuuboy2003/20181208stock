@@ -12,7 +12,7 @@ import json
 import mongodb
 import Fundamental_Analysis
 import Institutional_Investors
-import Technical_Analysis
+#import Technical_Analysis
 
 app = Flask(__name__)
 
@@ -100,76 +100,76 @@ def handle_message(event):
         # 推撥籌碼面分析
         line_bot_api.push_message(uid, TextSendMessage(Institutional_Investors.stockII(usespeak)))
         return 0
-    
-    elif re.match('KD圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥KD
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_KD(usespeak)))
-        return 0
-    
-    elif re.match('MA圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥MA
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_MA(usespeak)))
-        return 0
-    
-    elif re.match('MACD圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥MACD
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_MACD(usespeak)))
-        return 0
-    
-    elif re.match('OBV圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥OBV
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_OBV(usespeak)))
-        return 0
-    
-    elif re.match('威廉圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥威廉
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_William(usespeak)))
-        return 0
-    
-    elif re.match('ATR圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥ATR
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_ATR(usespeak)))
-        return 0
-    
-    elif re.match('ADX圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥ADX
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_ADX(usespeak)))
-        return 0
-    
-    elif re.match('RSI圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥RSI
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_RSI(usespeak)))
-        return 0
-    
-    elif re.match('MFI圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥MFI
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_MFI(usespeak)))
-        return 0
-    
-    elif re.match('ROC圖',usespeak): 
-        usespeak=mongodb.cache_temporary_stock(uid)
-        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
-        # 推撥ROC
-        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_ROC(usespeak)))
-        return 0
+#    
+#    elif re.match('KD圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥KD
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_KD(usespeak)))
+#        return 0
+#    
+#    elif re.match('MA圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥MA
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_MA(usespeak)))
+#        return 0
+#    
+#    elif re.match('MACD圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥MACD
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_MACD(usespeak)))
+#        return 0
+#    
+#    elif re.match('OBV圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥OBV
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_OBV(usespeak)))
+#        return 0
+#    
+#    elif re.match('威廉圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥威廉
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_William(usespeak)))
+#        return 0
+#    
+#    elif re.match('ATR圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥ATR
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_ATR(usespeak)))
+#        return 0
+#    
+#    elif re.match('ADX圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥ADX
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_ADX(usespeak)))
+#        return 0
+#    
+#    elif re.match('RSI圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥RSI
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_RSI(usespeak)))
+#        return 0
+#    
+#    elif re.match('MFI圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥MFI
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_MFI(usespeak)))
+#        return 0
+#    
+#    elif re.match('ROC圖',usespeak): 
+#        usespeak=mongodb.cache_temporary_stock(uid)
+#        line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
+#        # 推撥ROC
+#        line_bot_api.push_message(uid, TextSendMessage(Technical_Analysis.stock_ROC(usespeak)))
+#        return 0
     elif re.match('毛利率大於90％',usespeak): 
         usespeak=mongodb.cache_temporary_stock(uid)
         line_bot_api.push_message(uid, TextSendMessage('稍等一下, 雲端運算中...'))
