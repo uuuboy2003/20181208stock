@@ -75,7 +75,7 @@ def handle_message(event):
         #將整個網站的程式碼爬下來
         soup = BeautifulSoup(list_req.content, "html.parser")
         #找到b這個標籤
-        getstock= soup.find('b').text #抓到收盤價格
+        getstock= soup.findAll('b')[1].text #抓到收盤價格
         line_bot_api.push_message(uid, TextSendMessage(usespeak + '目前的價格是' + getstock))
         return 0
     
